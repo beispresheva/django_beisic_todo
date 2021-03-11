@@ -1,11 +1,18 @@
 {% extends "todo/base.html" %}
 
 {% block content %}
-    <!-- Title, Date and Buttons -->
     <div class="row mb-5">
         <div class="col">
-            <h1>All Tasks</h1>
-            <p class="text-secondary fw-bold">Saturday, 7 Mars 2021</p>   
+            <div>
+            
+            </div>
+            <h1 class="mb-4">Display Tasks By Label</h1>
+            <select class="form-select mb-4" aria-label="Default select example" width="50">
+            <option selected>None</option> 
+            <option value="1">KEJES</option>
+            <option value="2">VAYNERMEDIA</option>
+            </select>
+            <button type="button" class="btn btn-info text-white fw-bold align-middle">Select Label</button>
         </div>
         <div class="col">
             <div class="d-flex justify-content-end">
@@ -15,13 +22,11 @@
             </div>
         </div>                     
     </div>
-    
-    <!-- Tasks Displayed Here -->
     <div class="row">
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Tasks</th>
+                    <th>Tasks</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -29,8 +34,9 @@
             <tbody>
                 <tr>
                     <td>
-                        <p>This is my first task!</p>
-                        <p class="text-secondary date-text">7 Mars 2021</p>
+                        <p>This is my KEJES task!</p>
+                        <p class="text-secondary date-text">7 Mars 2021 / <span class="fw-bold">KEJES</span></p>
+                        <p class="text-danger fw-bold">High Priority </p>
                     </td>
                     <td>
                         <p>
@@ -44,9 +50,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <p>This is my LOW PRIORITY task!</p>
-                        <p class="text-secondary date-text">8 Mars 2021 / <span class="fw-bold">KEJES</span> </p>
-                        <p class="text-warning fw-bold">Low Priority </p>
+                        <p>This is my VAYNERMEDIA task!</p>
+                        <p class="text-secondary date-text">7 Mars 2021 / <span class="fw-bold">VAYNERMEDIA</span></p>
+                        <p class="text-danger fw-bold">High Priority </p>
                     </td>
                     <td>
                         <p>

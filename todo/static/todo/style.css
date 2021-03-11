@@ -1,0 +1,77 @@
+/* GENERAL */
+
+.white-text
+{
+    color: #fff;
+}
+
+.black-text {
+    color: #000;
+}
+
+.custom-bold-text
+{
+    font-weight: bold;
+}
+
+.custom-medium-text-size
+{
+    font-size: 2em;
+}
+
+p {
+    padding: 0;
+}
+
+
+
+
+
+/* LAYOUT */
+
+#layoutHeader
+{
+    background-color: #db4c3f;
+    z-index: 10;
+}
+
+#mainBody, #landingPage {
+    margin-top: 5em;
+}
+
+.sidebar ul li a:hover {
+    color: #db4c3f
+}
+
+.sidebar {
+    background-color: #EEEEEE;
+    min-height: 94.7vh;
+}
+
+.sticky-offset {
+    top: 56px;
+}
+
+main {
+    background-color: #fff;
+}
+
+
+
+
+
+/* BODY */
+
+.jumbotron {
+    height: 30vh;
+    z-index: 100;
+}
+
+#paintImg {
+    margin-top: -100px;
+    z-index: 3;
+}
+
+.custom-h4-width {
+    width: 100%;
+}

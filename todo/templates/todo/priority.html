@@ -1,0 +1,100 @@
+{% extends "todo/base.html" %}
+
+{% block content %}
+    <div class="row mb-5">
+        <div class="col">
+            <h1 class="mb-4">Display Tasks By Priority</h1>
+            <select class="form-select mb-4" aria-label="Default select example" width="50">
+                <option selected>All</option>
+                <option value="1">No Priority</option>
+                <option value="2">Low</option>
+                <option value="3">Medium</option>
+                <option value="4">High</option>
+            </select>
+            <button type="button" class="btn btn-info text-white fw-bold align-middle">Select Priority</button>
+        </div>
+        <div class="col">
+            <div class="d-flex justify-content-end">
+                <span class="align-middle">
+                    <button type="button" class="btn btn-danger align-middle">Add New Task</button>
+                </span>
+            </div>
+        </div>                     
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Tasks</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>This is my no priority task!</p>
+                        <p class="text-secondary date-text">7 Mars 2021 / <span class="fw-bold">KEJES</span> </p>
+                    </td>
+                    <td>
+                        <p>
+                            <a href="#" class="black-text fw-bold text-decoration-none">CROSS</a>
+                        </p>
+                    </td>
+                    <td>
+                        <a href="#" class="text-decoration-none pe-3">Edit</a>
+                        <a href="#" class="text-danger text-decoration-none pe-3">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>This is my LOW PRIORITY task!</p>
+                        <p class="text-secondary date-text">8 Mars 2021 / <span class="fw-bold">KEJES</span> </p>
+                        <p class="text-warning fw-bold">Low Priority </p>
+                    </td>
+                    <td>
+                        <p>
+                            <a href="#" class="black-text fw-bold text-decoration-none">CROSS</a>
+                        </p>
+                    </td>
+                    <td>
+                        <a href="#" class="text-decoration-none pe-3">Edit</a>
+                        <a href="#" class="text-danger text-decoration-none pe-3">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>This is my MED PRIORITY task!</p>
+                        <p class="text-secondary date-text">9 Mars 2021 / <span class="fw-bold">KEJES</span> </p>
+                        <p class="text-info fw-bold">Medium Priority </p>
+                    </td>
+                    <td>
+                        <p>
+                            <a href="#" class="black-text fw-bold text-decoration-none">CROSS</a>
+                        </p>
+                    </td>
+                    <td>
+                        <a href="#" class="text-decoration-none pe-3">Edit</a>
+                        <a href="#" class="text-danger text-decoration-none pe-3">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>This is my HIGH PRIORITY task!</p>
+                        <p class="text-secondary date-text">10 Mars 2021 / <span class="fw-bold">KEJES</span> </p>
+                        <p class="text-danger fw-bold">High Priority </p>
+                    </td>
+                    <td>
+                        <p>
+                            <a href="#" class="black-text fw-bold text-decoration-none">CROSS</a>
+                        </p>
+                    </td>
+                    <td>
+                        <a href="#" class="text-decoration-none pe-3">Edit</a>
+                        <a href="#" class="text-danger text-decoration-none pe-3">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

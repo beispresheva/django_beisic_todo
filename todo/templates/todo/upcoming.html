@@ -1,10 +1,12 @@
 {% extends "todo/base.html" %}
 
 {% block content %}
-    <!-- Title, Date and Buttons -->
     <div class="row mb-5">
         <div class="col">
-            <h1>All Tasks</h1>
+            <div>
+            
+            </div>
+            <h1>Upcoming Tasks</h1>
             <p class="text-secondary fw-bold">Saturday, 7 Mars 2021</p>   
         </div>
         <div class="col">
@@ -15,13 +17,11 @@
             </div>
         </div>                     
     </div>
-    
-    <!-- Tasks Displayed Here -->
     <div class="row">
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Tasks</th>
+                    <th scope="col">Upcoming Tasks</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -30,7 +30,7 @@
                 <tr>
                     <td>
                         <p>This is my first task!</p>
-                        <p class="text-secondary date-text">7 Mars 2021</p>
+                        <p class="text-success date-text">7 Mars 2021</p>
                     </td>
                     <td>
                         <p>
@@ -42,22 +42,7 @@
                         <a href="#" class="text-danger text-decoration-none pe-3">Delete</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <p>This is my LOW PRIORITY task!</p>
-                        <p class="text-secondary date-text">8 Mars 2021 / <span class="fw-bold">KEJES</span> </p>
-                        <p class="text-warning fw-bold">Low Priority </p>
-                    </td>
-                    <td>
-                        <p>
-                            <a href="#" class="black-text fw-bold text-decoration-none">CROSS</a>
-                        </p>
-                    </td>
-                    <td>
-                        <a href="#" class="text-decoration-none pe-3">Edit</a>
-                        <a href="#" class="text-danger text-decoration-none pe-3">Delete</a>
-                    </td>
-                </tr>
+                
             </tbody>
         </table>
     </div>
