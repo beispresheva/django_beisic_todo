@@ -1,0 +1,10 @@
+{% extends "todo/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container my-5">
+        <h1>Welcome to your profile</h1>
+        <hr>
+        <h4>Username: {{ user.username }}</h4>
+    </div>
+{% endblock content %}
