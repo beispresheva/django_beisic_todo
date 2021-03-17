@@ -30,7 +30,7 @@
                     </div>
                     <div class="col">
                         <ul class="nav justify-content-end mt-3">
-                            <li class="px-3"><a class="text-decoration-none white-text" href="#">beispresheva</a></li>
+                            <li class="px-3"><a class="text-decoration-none white-text" href="#">{{ request.session.username }}</a></li>
                             <li class="px-3"><a class="text-decoration-none white-text" href="#">Log Out</a></li>
                         </ul>
                     </div>
@@ -83,6 +83,13 @@
                 <!-- MAIN BODY SECTION -->
                 <main class="col-9 p-5">
                     <!-- Code here ... -->
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                        {% endfor%}
+                    {% endif %}
                     {% block content %}{% endblock %}
                 </main>
             </div>
