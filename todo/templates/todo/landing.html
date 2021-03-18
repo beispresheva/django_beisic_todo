@@ -1,0 +1,61 @@
+{% extends "todo/login_base.html" %}
+
+{% block content %}
+    <section>
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron d-flex justify-content-center align-items-center">
+                    <div>
+                        <h1 class="display-1 text-center fw-bold">Organize it all <br> with BEISIC TODO</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5 pb-5">
+            <div class="col">
+                <div id="paintImg" class="d-flex justify-content-center">
+                    <img src="https://todoist.com/_next/static/images/header@2x_c84b18bc0a0246618f70afce1a562d58.jpg" width=1000 height="800"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #db4c3f">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col d-flex flex-column align-self-center">
+                    <h1 class="custom-h4-width mb-5 text-white text-decoration-underline">
+                        Beisic Todo has helped <br>
+                        millions of people complete
+                    </h1>
+                    <h1 class="display-3 custom-h4-width fw-bold text-white">
+                        over 1.5 billion tasks <br>
+                        in 150+ million projects.
+                    </h1>
+                </div>
+                <div class="col">
+                    <img src="https://todoist.com/_next/static/images/peace@2x_c77d14499cb7c869fbbd49c2b98f9305.png" width=500 height="500"/>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section>
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron d-flex justify-content-center align-items-center">
+                    <div>
+                        <h1 class="display-1 text-center fw-bold mb-5">
+                            Achieve peace of mind<br> with Beisic Todo
+                        </h1>
+                        <div class="text-center">
+                            <a href="{% url 'login' %}" class="btn btn-danger fw-bold fs-2">Log In</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+{% endblock content %}

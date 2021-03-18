@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from datetime import datetime, date
 from django.contrib.auth.models import User
 
 # Label Model
@@ -21,7 +22,7 @@ class Task(models.Model):
 	title = models.CharField(max_length=150)
 	description = models.TextField()
 	created_at = models.DateTimeField(default=timezone.now)
-	taskdate = models.DateTimeField()
+	taskdate = models.DateTimeField("Task Date (mm/dd/yy)", auto_now_add=False, auto_now=False, blank=True)
 	completed = models.BooleanField(default=False)
 	priority = models.ForeignKey(Priority, on_delete=models.CASCADE)
 	label = models.ForeignKey(Label, on_delete=models.CASCADE)

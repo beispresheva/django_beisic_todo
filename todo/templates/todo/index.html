@@ -10,7 +10,7 @@
         <div class="col">
             <div class="d-flex justify-content-end">
                 <span class="align-middle">
-                    <button type="button" class="btn btn-danger align-middle">Add New Task</button>
+                    <a href="{% url 'task-create' %}" class="btn btn-danger align-middle">Add New Task</a>
                 </span>
             </div>
         </div>                     
@@ -27,10 +27,12 @@
                 </tr>
             </thead>
             <tbody>
+                {% for task in tasks %}
                 <tr>
                     <td>
-                        <p>This is my first task!</p>
-                        <p class="text-secondary date-text">7 Mars 2021</p>
+                        <p>{{ task.title }}</p>
+                        <p class="text-secondary date-text">{{ task.taskdate }} / <span class="fw-bold">{{ task.label }}</span> </p>
+                        <p class="text-danger fw-bold">{{ task.priority }} </p>
                     </td>
                     <td>
                         <p>
@@ -38,26 +40,11 @@
                         </p>
                     </td>
                     <td>
-                        <a href="#" class="text-decoration-none pe-3">Edit</a>
-                        <a href="#" class="text-danger text-decoration-none pe-3">Delete</a>
+                        <a href="{% url 'task-update' task.id %}" class="text-decoration-none pe-3">Edit</a>
+                        <a href="{% url 'task-delete' task.id %}" class="text-danger text-decoration-none pe-3">Delete</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <p>This is my LOW PRIORITY task!</p>
-                        <p class="text-secondary date-text">8 Mars 2021 / <span class="fw-bold">KEJES</span> </p>
-                        <p class="text-warning fw-bold">Low Priority </p>
-                    </td>
-                    <td>
-                        <p>
-                            <a href="#" class="black-text fw-bold text-decoration-none">CROSS</a>
-                        </p>
-                    </td>
-                    <td>
-                        <a href="#" class="text-decoration-none pe-3">Edit</a>
-                        <a href="#" class="text-danger text-decoration-none pe-3">Delete</a>
-                    </td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>
