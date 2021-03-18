@@ -7,17 +7,21 @@
             
             </div>
             <h1 class="mb-4">Display Tasks By Label</h1>
-            <select class="form-select mb-4" aria-label="Default select example" width="50">
-            <option selected>None</option> 
+            <select name='custom-labels' class="form-select mb-4" aria-label="Default select example" width="50">
+                <option value="None" name>None</option> 
+            {% for label in labels %}
+                <option value="{{ label.label }}">{{ label.label }}</option>
+            {% endfor %}
+            <!-- <option selected>None</option> 
             <option value="1">KEJES</option>
-            <option value="2">VAYNERMEDIA</option>
+            <option value="2">VAYNERMEDIA</option> -->
             </select>
             <button type="button" class="btn btn-info text-white fw-bold align-middle">Select Label</button>
         </div>
         <div class="col">
             <div class="d-flex justify-content-end">
                 <span class="align-middle">
-                    <button type="button" class="btn btn-danger align-middle">Add New Task</button>
+                    <a href="{% url 'label-create' %}" class="btn btn-danger align-middle">Add New Label</a>
                 </span>
             </div>
         </div>                     
@@ -32,6 +36,7 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Here you should code the customLabels part, cuz you didnt code that still -->
                 <tr>
                     <td>
                         <p>This is my KEJES task!</p>
